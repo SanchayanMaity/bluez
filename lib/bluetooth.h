@@ -255,6 +255,12 @@ enum {
 
 #define BT_POLL_ERRQUEUE	21
 
+#define BT_CREDITS		22
+struct bt_credits {
+	uint16_t tx;
+	uint16_t rx;
+} __attribute((packed));
+
 /* Byte order conversions */
 #if __BYTE_ORDER == __LITTLE_ENDIAN
 #define htobs(d)  (d)
