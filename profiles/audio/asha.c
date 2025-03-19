@@ -485,6 +485,7 @@ static int asha_source_disconnect(struct btd_service *service)
 
 	asha_source_endpoint_unregister(asha_dev);
 	bt_asha_reset(asha_dev->asha);
+	bt_asha_state_reset(asha_dev->asha);
 
 	btd_service_disconnecting_complete(service, 0);
 
